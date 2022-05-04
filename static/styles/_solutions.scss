@@ -1,0 +1,217 @@
+
+.solution-section {
+  width: 80%;
+  height: auto;
+  //background-color: green;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.solution-heading {
+  //center flexbox
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+}
+
+.solution-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+  width: 100%;
+  //background-color: yellow;
+
+}
+
+.solution {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  height: 15rem;
+  width: 60rem;
+  position: relative;
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  border: 3px solid black;
+  padding: 2rem;
+
+  box-shadow: 9px 9px 1px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 9px 9px 3px 0px rgba(0, 0, 0, 0.45);
+    transition: 0.3s;
+  }
+
+  .solution-image-container {
+    width: 35%;
+    //background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      border: 3px solid black;
+      box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        // gray scale on hover
+        filter: grayscale(30%);
+        transition: 0.3s;
+      }
+
+      // sem klik na podrobne zobrazenie toho projektu na zobrazenie celeho toho komponentu kde to bude obsahovat podrobnosti toho celeho.
+
+
+
+      &:hover {
+        box-shadow: 5px 5px 2.5px 0px rgba(0, 0, 0, 0.45);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .solution-text-container {
+    margin-top: 1rem;
+    width: 65%;
+    height: 100%;
+    //background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .solution-text__description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+    //background-color: yellow;
+
+    h3 {
+      font-size: 2rem;
+      color: black;
+      margin-left: 2rem;
+      // add doted underline
+      text-decoration-style: dotted;
+      text-decoration-color: $purple_color;
+
+    }
+
+    p {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      font-size: 1.2rem;
+      // justify text
+      text-align: justify;
+    }
+  }
+
+  .solution-text-footer {
+    height: 3rem;
+    width: 100%;
+    //background-color: red;
+    display: flex;
+    margin-top: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+
+    a {
+      color: black;
+      border-radius: 12px;
+      border: 3px solid black;
+      padding-top: 0.5rem;
+      font-size: 1.2rem;
+      padding-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      background-color: $purple_color;
+      box-shadow: 4px 4px 1px 0px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: 0.3s;
+
+
+      // create on hover animation
+      &:hover {
+        box-shadow: 4.5px 4.5px 2px 0px rgba(0, 0, 0, 0.4);
+        transition: 0.2s;
+      }
+    }
+  }
+
+  .solution-name {
+    position: absolute;
+    right: 0.4rem;
+    top: 1rem;
+  }
+
+  .solution-date {
+    position: absolute;
+    right: 0.4rem;
+    bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+
+  .solution {
+    width: 100%;
+    height: auto;
+
+    .solution-image-container {
+      display: none;
+      width: 0;
+    }
+
+    .solution-text-container {
+      width: 100%;
+    }
+
+    .solution-text__description {
+
+      h3 {
+        font-size: 1.7rem;
+        color: black;
+        margin-left: 1rem;
+        // add doted underline
+        text-decoration-style: dotted;
+        text-decoration-color: $purple_color;
+      }
+
+      p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1rem;
+        // justify text
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+
+
+
+
+

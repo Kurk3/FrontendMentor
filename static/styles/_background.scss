@@ -1,0 +1,77 @@
+.background-images {
+  width: 100%;
+  height: 100%;
+
+
+  .square-1 {
+    width: 15rem;
+    z-index: -1;
+    height: 15rem;
+    position: absolute;
+    background-color: $lightblue_color;
+    top: 0;
+    right: 0;
+  }
+
+  .square-2 {
+    width: 15rem;
+    z-index: -1;
+    height: 15rem;
+    position: absolute;
+    background-color: $lightblue_color;
+    top: 25rem;
+    left: 0;
+  }
+
+  .dot-element-1 {
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    // shrink line spacing
+     line-height: 0.4;
+    color: $gray_color_text;
+    top: 75rem;
+    right: 35rem;
+
+    p {
+      font-family: $side_font;
+      font-size: 4rem;
+      user-select: none;
+    }
+  }
+
+  .square-3 {
+    width: 30rem;
+    height: 30rem;
+    background-color: $lightblue_color;
+    position: absolute;
+    top: 55rem;
+    right: 0;
+    z-index: -1;
+  }
+
+  .square-3-login {
+    width: 30rem;
+    height: 15rem;
+    background-color: $lightblue_color;
+    position: absolute;
+    top: 40rem;
+    right: 0;
+    z-index: -1;
+  }
+
+  .square-4 {
+    width: 10rem;
+    height: 22rem;
+    background-color: $lightblue_color;
+    position: absolute;
+    top: 110rem;
+    left: 0;
+    z-index: -1;
+  }
+
+
+}
+
+// if media screen is less than 798px

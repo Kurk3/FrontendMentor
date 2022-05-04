@@ -1,0 +1,455 @@
+.login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  // get height in vh when full page
+  height: 100vh;
+
+  //background-color: green;
+  width: 100%;
+}
+
+.login-heading {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+
+  h2 {
+    font-size: 2rem;
+    // make thin font-weight
+    font-weight: 250;
+  }
+}
+
+.login-container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35rem;
+  z-index: 0;
+  background-color: white;
+  //background-color: yellow;
+  border: 5px solid black;
+  border-radius: 15px;
+  // add more alternative off shadow
+  box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  padding: 3rem;
+
+
+  &:hover {
+    box-shadow: 13px 13px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+  }
+}
+
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35rem;
+  height: 35rem;
+  background-color: #fff;
+  border: 5px solid black;
+  border-radius: 15px;
+  // add more alternative off shadow
+  box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+}
+
+.login-content {
+  width: 90%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  //background-color: #FFE500;
+}
+
+.login-container-bigger {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35rem;
+  height: 29rem;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 15px;
+  // add more alternative off shadow
+  box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+}
+
+.login-content-bigger {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //background-color: #FFE500;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container-wrapper {
+  display: flex;
+  width: 100%;
+
+}
+
+textarea {
+  width: 100%;
+  outline: none;
+  padding-left: 0.3rem;
+  height: 5.5rem;
+  border: 3px solid black;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  resize: none;
+  padding-top: 0.2rem;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+
+
+  &:hover {
+    box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
+
+  &:focus {
+    box-shadow: 6px 6px 4.5px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: auto;
+  //background-color: green;
+  position: relative;
+
+  p {
+    font-size: 1rem;
+    font-weight: 200;
+    color: red;
+    position: absolute;
+    right: 0.1rem;
+    //border: 2px solid red;
+    top: 0.4rem;
+  }
+
+  a {
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.3rem;
+
+    &:hover {
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+  }
+
+  button {
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border: 3px solid black;
+    // add nice shadow
+    box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border-radius: 7px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: $purple_color;
+
+    &:hover {
+      box-shadow: 4.5px 4.5px 3px rgba(0, 0, 0, 0.45);
+      transition: 0.3s ease-in-out;
+    }
+
+  }
+
+  .input-field-normal {
+
+    width: 100%;
+    outline: none;
+    padding-left: 0.3rem;
+    height: 2rem;
+    border: 3px solid black;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+    }
+
+    &:focus {
+      box-shadow: 6px 6px 4.5px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+    }
+
+
+  }
+
+  label {
+    font-size: 1.3rem;
+    margin: 0.3rem;
+  }
+}
+
+
+.active {
+  border: 3px solid red;
+  width: 100%;
+  outline: none;
+  padding-left: 0.3rem;
+  height: 2rem;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.3);
+}
+
+.active-label {
+  color: red;
+}
+
+
+.input-container-smaller {
+  display: flex;
+  flex-direction: column;
+  height: 2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 814px) {
+
+
+  .login-container, .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 23rem;
+    background-color: #fff;
+    border: 5px solid black;
+    border-radius: 15px;
+    // add more alternative off shadow
+    box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+  }
+
+  .register-container {
+    height: 32rem;
+  }
+
+}
+
+@media screen and (max-width: 697px) {
+
+  .login-container, .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 23rem;
+    background-color: #fff;
+    border: 5px solid black;
+    border-radius: 15px;
+    // add more alternative off shadow
+    box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+  }
+
+  .higher {
+    height: 30rem;
+  }
+
+  .register-container {
+    height: 32rem;
+  }
+
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    p {
+      font-size: 0.5rem;
+      font-weight: 200;
+      color: red;
+      position: absolute;
+      right: 0.1rem;
+      //border: 2px solid red;
+      top: 0.4rem;
+    }
+
+    a {
+      color: black;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0.3rem;
+      transition: 0.2s;
+
+      &:hover {
+        //color: red;
+        transition: 0.2s;
+      }
+    }
+
+    button {
+      width: 10rem;
+      height: 3rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      border: 3px solid black;
+      // add nice shadow
+      box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      border-radius: 7px;
+      background-color: $purple_color;
+
+    }
+
+
+    .input-class-post-solution {
+      width: 100%;
+      outline: none;
+      padding-left: 0.3rem;
+      height: 2rem;
+      border: 3px solid black;
+      border-radius: 7px;
+      font-size: 1.1rem;
+      box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+
+    }
+
+
+    label {
+      font-size: 1.3rem;
+      margin: 0.3rem;
+    }
+  }
+}
+
+
+@media screen and (max-width: 570px) {
+
+  .login-container, .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 26rem;
+    background-color: #fff;
+    border: 5px solid black;
+    border-radius: 15px;
+    // add more alternative off shadow
+    box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+  }
+
+  .register-container {
+    height: 39rem;
+  }
+
+
+
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 200;
+      color: red;
+      position: absolute;
+      right: 0.1rem;
+      //border: 2px solid red;
+      top: 0.4rem;
+    }
+
+    a {
+      color: black;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0.3rem;
+
+      &:hover {
+        //color: red;
+        transition: 0.2s;
+      }
+    }
+
+    button {
+      width: 10rem;
+      height: 3rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      border: 3px solid black;
+      // add nice shadow
+      box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      border-radius: 7px;
+      background-color: $purple_color;
+
+    }
+
+    input {
+      width: 100%;
+      outline: none;
+      padding-left: 0.3rem;
+      height: 2rem;
+      border: 3px solid black;
+      border-radius: 7px;
+      font-size: 1.1rem;
+      box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    label {
+      font-size: 1.3rem;
+      margin: 0.3rem;
+    }
+
+
+  }
+
+}
+
+
+
+
+
+

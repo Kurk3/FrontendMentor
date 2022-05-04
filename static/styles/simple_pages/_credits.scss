@@ -1,0 +1,211 @@
+
+.credits-section {
+  //background-color: green;
+  width: 80%;
+  height: 100vh;
+
+}
+
+
+.credits-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 50rem;
+  align-items: center;
+}
+
+
+.credits-row {
+  display: flex;
+  padding: 1rem;
+  flex-direction: row;
+  max-width: 60rem;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 3px solid black;
+  margin: 3rem;
+  background-color: white;
+  box-shadow: 7px 7px 1px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+
+  &:hover {
+    transition: 0.4s;
+    box-shadow: 8.5px 8.5px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.image-part {
+  width: 30%;
+  height: 100%;
+
+  img {
+    margin-top: 0.8rem;
+    width: 100%;
+    background-color: inherit;
+    max-width: 13rem;
+    height: auto;
+    max-height: 18rem;
+    object-fit: scale-down;
+    object-position: center;
+    position: relative;
+    margin-left: 2rem;
+    border: 3px solid black;
+    border-radius: 15px;
+    box-shadow: 5.5px 5.5px 1px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+
+    // create on hover animation
+    &:hover {
+      transition: 0.5s;
+      filter: grayscale(20%);
+      box-shadow: 6px 6px 3px 0px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.heading-credits {
+  height: 2rem;
+  color: black;
+  // add dotted underline
+  text-decoration: underline dotted;
+  text-decoration-color: $purple_color;
+  margin-bottom: .7rem;
+}
+
+.underheading-credits {
+
+}
+
+
+.text-part {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-left: 3.5rem;
+  }
+
+  .underheading-credits {
+    font-size: 1.5rem;
+    margin-left: 3.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-left: 3.5rem;
+    text-align: justify;
+    margin-right: 3rem;
+  }
+}
+
+.credits-text-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.credits-button-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+
+  a {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: 3px solid black;
+    border-radius: 15px;
+    box-shadow: 5.5px 5.5px 1px 0px rgba(0, 0, 0, 0.3);
+    background-color: $yellow_color;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #fcc804;
+      box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.4);
+      transition: 0.2s;
+    }
+  }
+}
+
+
+@media screen and (max-width: 760px) {
+  // credit section na 100%
+  .credits-section {
+    width: 90%;
+  }
+
+  .credits-text-wrapper {
+    margin-top: 1rem;
+  }
+
+  .text-part {
+
+    .heading-credits {
+      font-size: 1.7rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .underheading-credits {
+      font-size: 1.3rem;
+      //margin-top: 0.1rem;
+
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+  // zmensenie tlacitka
+  // zmensenie textu
+  // rozumne rozlozenie 50% na oboch stranach
+
+}
+
+@media screen and (max-width: 550px) {
+  // split of credits row into two
+  .credits-row {
+    flex-direction: column;
+  }
+
+  .text-part {
+    width: 100%;
+  }
+
+  .image-part {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    img {
+      margin-left: 3.5rem;
+      max-width: 10rem;
+    }
+
+  }
+
+
+}
+
+
+

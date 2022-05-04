@@ -1,0 +1,74 @@
+.popup-window--show-answer {
+  height: auto;
+  width: 70%;
+  padding: 2rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 2px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+
+  &:hover {
+    box-shadow: 13px 13px 2px 0px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+  }
+
+}
+
+.arrow-element {
+  width: 0;
+  height: 0;
+  border-left: 23px solid transparent;
+  border-right: 23px solid transparent;
+  border-bottom: 23px solid black;
+  position: absolute;
+  top: -1.6rem;
+}
+
+.popup-window--show-answer-text {
+
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .name {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+}
+
+.popup-window--show-answer-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  height: 2.5rem;
+
+
+  .close-button-footer {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: $purple_color;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+}
+
+
+// create a triangle element with outline and fill
+
