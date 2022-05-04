@@ -9,5 +9,3 @@ def forum_route():
 
 
 
-
-
