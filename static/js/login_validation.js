@@ -54,8 +54,6 @@ function validateLogin(e) {
         alert("Login successfully");
     }
 }
-//add event listener to the login_button
-// login_button.addEventListener("", validateLogin);
 login_form.addEventListener('submit', function (e) {
     validateLogin(e);
 });

@@ -116,15 +116,8 @@ login_form.addEventListener('submit', (e) => {
         e.preventDefault();
         // errorElement.innerHTML = messages.join(', ');
     } else {
-        window.location.href = '/sucess'; // redirectne na specificku stranku ked sa vsetko toto splni v tom javascripte.
+        window.location.href = '/homepage_after';
     }
 });
 
 
-// function validate_login_name() {
-//     if (login_name.value.match(/[0-9]/g) || login_name.value.match(/[a-d]/g) || login_name.value.match(/[A-Z]/g)) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }

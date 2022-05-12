@@ -214,7 +214,7 @@ register_form.addEventListener('submit', (e) => {
         e.preventDefault();
         // errorElement.innerHTML = messages.join(', ');
     } else {
-        // window.location.href = '/success'; // redirectne na specificku stranku ked sa vsetko toto splni v tom javascripte.
+        window.location.href = '/homepage_after';
     }
 });
 

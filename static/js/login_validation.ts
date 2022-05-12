@@ -3,7 +3,6 @@
 
 // fix the bug with value of the input in typescript
 const login_form = document.getElementById('login-form') as HTMLFormElement;
-
 const login_name = document.getElementById("login-name") as HTMLInputElement;
 const login_name_label = document.getElementById("active-label-username") as HTMLLabelElement;
 const login_name_message = document.getElementById("login-username-message") as HTMLParagraphElement
@@ -60,8 +59,7 @@ function validateLogin(e) {
     }
 }
 
-//add event listener to the login_button
-// login_button.addEventListener("", validateLogin);
+
 
 login_form.addEventListener('submit', (e) => {
     validateLogin(e);
