@@ -179,9 +179,6 @@ register_form.addEventListener('submit', (e) => {
 
 
         console.log(messages.push('Email cant be empty'));
-        setTimeout(() => {
-            reset_valid();
-        }, 3000);
 
 
     } else if (email_register_input.value.indexOf(".") === -1) {
@@ -195,9 +192,7 @@ register_form.addEventListener('submit', (e) => {
 
         console.log(messages.push('Email must contain .'));
 
-        setTimeout(() => {
-            reset_valid();
-        }, 3000);
+
 
     } else if (who_is_your_best_friend_input.value === "") {
         valid();
@@ -206,9 +201,7 @@ register_form.addEventListener('submit', (e) => {
 
         console.log(messages.push('Please enter your best friend\'s name'));
 
-        setTimeout(() => {
-            reset_valid();
-        }, 3000);
+
 
     } else {
         console.log(messages.push('Registration successful'));

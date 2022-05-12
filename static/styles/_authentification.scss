@@ -3,10 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: auto;
   // get height in vh when full page
   height: 100vh;
-
   //background-color: green;
   width: 100%;
 }
@@ -24,6 +22,7 @@
     // make thin font-weight
     font-weight: 250;
   }
+
 }
 
 .login-container {
@@ -248,7 +247,6 @@ textarea {
 
 @media screen and (max-width: 814px) {
 
-
   .login-container, .register-container {
     display: flex;
     flex-direction: column;
@@ -287,6 +285,7 @@ textarea {
     padding: 3rem;
   }
 
+
   .higher {
     height: 30rem;
   }
@@ -295,7 +294,6 @@ textarea {
     height: 32rem;
   }
 
-
   .input-wrapper {
     display: flex;
     flex-direction: column;
@@ -303,7 +301,7 @@ textarea {
     position: relative;
 
     p {
-      font-size: 0.5rem;
+      font-size: 1rem;
       font-weight: 200;
       color: red;
       position: absolute;
@@ -323,6 +321,7 @@ textarea {
         //color: red;
         transition: 0.2s;
       }
+
     }
 
     button {
@@ -339,7 +338,6 @@ textarea {
 
     }
 
-
     .input-class-post-solution {
       width: 100%;
       outline: none;
@@ -349,9 +347,7 @@ textarea {
       border-radius: 7px;
       font-size: 1.1rem;
       box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
-
     }
-
 
     label {
       font-size: 1.3rem;
@@ -368,7 +364,7 @@ textarea {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 87%;
     height: 26rem;
     background-color: #fff;
     border: 5px solid black;
@@ -383,16 +379,18 @@ textarea {
   }
 
 
-
-
   .input-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
     position: relative;
 
+    label {
+      font-size: 1.1rem;
+    }
+
     p {
-      font-size: 1.2rem;
+      font-size: 0.8rem;
       font-weight: 200;
       color: red;
       position: absolute;
@@ -438,14 +436,8 @@ textarea {
       box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
     }
 
-    label {
-      font-size: 1.3rem;
-      margin: 0.3rem;
-    }
-
 
   }
-
 }
 
 

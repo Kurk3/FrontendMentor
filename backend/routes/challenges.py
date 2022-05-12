@@ -1,13 +1,10 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 challenges = Blueprint('challenges', __name__)
 
-@challenges.route('/challanges')
+@challenges.route('/challanges', methods=['GET', 'POST'])
 def challenges_main():
-    return 'challanges'
+    return render_template('challenges/challenges.html')
 
-@challenges.route('/challanges/calculator')
-def challenges_calculator():
-    return 'challanges calculator'
 
 

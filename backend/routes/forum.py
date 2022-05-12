@@ -1,10 +1,10 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 forum = Blueprint('forum', __name__)
 
-@forum.route('/forum')
+@forum.route('/forum', methods=['GET', 'POST'])
 def forum_route():
-    return 'forum'
+    return render_template('forum/forum_posts.html')
 
 
 

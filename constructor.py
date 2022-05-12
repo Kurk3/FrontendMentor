@@ -9,13 +9,12 @@ def create_app():
     from backend.routes.challenges import challenges
     from backend.routes.forum import forum
     from backend.routes.solutions import solution
-    from backend.routes.other import views
+    from backend.routes.contact import permiss
 
-    # import blueprintov
     app.register_blueprint(auth, url_prefix='/')
     app.register_blueprint(challenges, url_prefix='/')
     app.register_blueprint(forum, url_prefix='/')
+    app.register_blueprint(permiss, url_prefix='/')
     app.register_blueprint(solution, url_prefix='/')
-    app.register_blueprint(views, url_prefix='/')
 
     return app
