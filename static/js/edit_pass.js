@@ -107,7 +107,6 @@ edit_password_form.addEventListener('submit', (e) => {
     } else {
         console.log(messages.push("your password has been changed"));
         edit_password_form.submit();
-        alert("Your password has been changed");
 
         window.location.href = '/homepage_after';
 

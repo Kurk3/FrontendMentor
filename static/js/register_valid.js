@@ -139,15 +139,14 @@ register_form.addEventListener('submit', (e) => {
             confirm_password_register_input.style.border = "3px solid black";
         }, 3000);
 
-    } //else if (confirm_password_register_input.value.length > 3) {
-    //     console.log(messages.push('Confirm password is too long'));
+    } else if (confirm_password_register_input.value !== password_register_input.value) {
 
-    else if (confirm_password_register_input.value !== password_register_input.value) {
         valid();
 
         confirm_password_register_input.style.border = "3px solid red";
         confirm_password_register_label.style.color = "red";
         confirm_password_register_message.innerHTML = "Passwords do not match.";
+
 
         console.log(messages.push('Password does not match'));
 
@@ -193,7 +192,6 @@ register_form.addEventListener('submit', (e) => {
         console.log(messages.push('Email must contain .'));
 
 
-
     } else if (who_is_your_best_friend_input.value === "") {
         valid();
         who_is_your_best_friend_input.style.border = "3px solid red";
@@ -202,11 +200,10 @@ register_form.addEventListener('submit', (e) => {
         console.log(messages.push('Please enter your best friend\'s name'));
 
 
-
     } else {
         console.log(messages.push('Registration successful'));
         register_form.submit();
-        alert('Registration successful');
+        window.location.href = '/homepage_after';
         //window.location.href = '/success';
     }
 
@@ -214,7 +211,7 @@ register_form.addEventListener('submit', (e) => {
         e.preventDefault();
         // errorElement.innerHTML = messages.join(', ');
     } else {
-        window.location.href = '/homepage_after';
+
     }
 });
 
@@ -298,8 +295,8 @@ function valid() {
 
     if (password_register_input !== "") {
         if (confirm_password_register_input.value === password_register_input.value
-           && password_register_input.value >= 3
-           && confirm_password_register_input.value >= 3) {
+            && confirm_password_register_input.value.length >= 3
+            && confirm_password_register_input.value.length <= 20) {
             valid_confirm_password();
         } else {
             confirm_password_register_message.style.color = "red";
@@ -310,7 +307,7 @@ function valid() {
     }
 
     if (email_register_input.value.includes("@")
-       && email_register_input.value.includes(".")) {
+        && email_register_input.value.includes(".")) {
         valid_email();
     } else {
         email_register_message.style.color = "red";
