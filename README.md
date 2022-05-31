@@ -43,5 +43,5 @@
 ## How to run
 
 1. Install dependencies. (download requirements.txt)
-2. Run the project the app.py script 
-3. Test the project on localhost.
+2. Run the project the app.py script
+3. Test the project on localhost
