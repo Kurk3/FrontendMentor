@@ -30,7 +30,11 @@
 <main>
     <section class="login-section">
         <div class="register-container">
-            <form id="register-form" class="login-content">
+
+            <form method="POST"
+                  id="register-form"
+                  class="login-content">
+
                 <div class="login-heading">
                     <h2>SignUp</h2>
                 </div>
@@ -38,7 +42,11 @@
                 <div class="input-container">
                     <div class="input-wrapper">
                         <label id="username-register-label">Username</label>
-                        <input id="username-register-input" class="input-field-normal" type="text">
+                        <input
+                                name="register-username"
+                                id="username-register-input"
+                                class="input-field-normal" type="text">
+
                         <p id="username-register-message"></p>
                     </div>
                 </div>
@@ -46,7 +54,11 @@
                 <div class="input-container">
                     <div class="input-wrapper">
                         <label id="password-register-label">Password</label>
-                        <input id="password-register-input" class="input-field-normal" type="password">
+                        <input
+                               name="register-first-password"
+                               id="password-register-input"
+                               class="input-field-normal"
+                               type="password">
                         <p id="password-register-message"></p>
                     </div>
                 </div>
@@ -54,7 +66,10 @@
                 <div class="input-container">
                     <div class="input-wrapper">
                         <label id="confirm-password-register-label">Confirm Password</label>
-                        <input id="confirm-password-register-input"  class="input-field-normal" type="password">
+                        <input
+                               name="register-confirm-password"
+                               id="confirm-password-register-input"
+                               class="input-field-normal" type="password">
                         <p id="confirm-password-register-message"></p>
                     </div>
                 </div>
@@ -62,7 +77,12 @@
                 <div class="input-container">
                     <div class="input-wrapper">
                         <label id="email-register-label">Email</label>
-                        <input id="email-register-input" class="input-field-normal" type="text">
+                        <input
+                               name="register-email"
+                               id="email-register-input"
+                               class="input-field-normal"
+                               type="text">
+
                         <p id="email-register-message"></p>
                     </div>
                 </div>
@@ -70,7 +90,12 @@
                 <div class="input-container">
                     <div class="input-wrapper">
                         <label id="who-is-your-best-friend-label">Who is your best friend?</label>
-                        <input id="who-is-your-best-friend-input" class="input-field-normal" type="text">
+                        <input
+                               name="register-best-friend"
+                               id="who-is-your-best-friend-input"
+                               class="input-field-normal"
+                               type="text">
+
                         <p id="who-is-your-best-friend-message"></p>
                     </div>
                 </div>
@@ -119,6 +144,6 @@
 
 <script src="/static/js/navbar.js"></script>
 <script src="/static/js/main-script.js"></script>
-<script src="/static/js/register_valid.js"></script>
+{#<script src="/static/js/register_valid.js"></script>#}
 </body>
 </html>

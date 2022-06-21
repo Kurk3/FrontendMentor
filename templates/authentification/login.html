@@ -30,16 +30,18 @@
 <main>
     <section class="login-section">
         <div class="login-container" style="height: 25rem">
-            <form id="login-form" action="/login" method="GET" class="login-content" style="height: 30rem">
+            <form id="login-form"  method="POST" class="login-content" style="height: 30rem">
                 <div class="login-heading">
                     <h2>Login</h2>
                 </div>
 
                 <div class="input-container">
                     <div class="input-wrapper">
-                        <label id="active-label-username">Username</label>
+                        <label id="active-label-username">Email</label>
                         <input class="input-field-normal"
-                               type="text" id="login-name">
+                               type="text"
+                               id="login-name"
+                               name="login-email">
                              <p id="login-username-message"></p>
                     </div>
                 </div>
@@ -49,7 +51,8 @@
                         <label id="active-label-password">Password</label>
                         <input class="input-field-normal"
                                type="password"
-                               id="login-password">
+                               id="login-password"
+                        name="login-password">
                             <p id="login-password-message"></p>
                     </div>
                 </div>
@@ -101,6 +104,6 @@
 
 <script src="/static/js/navbar.js"></script>
 <script src="/static/js/main-script.js"></script>
-<script src="/static/js/login_valid.js"></script>
+{#<script src="/static/js/login_valid.js"></script>#}
 </body>
 </html>

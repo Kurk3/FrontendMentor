@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Change Password</title>
+    <title>Create Post</title>
     <link rel="stylesheet" href="/static/styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-
 <header>
     <nav>
         <div class="logo">
@@ -15,14 +14,16 @@
         </div>
 
         <ul class="nav-links">
+            <li><a href="/forum">Forum</a></li>
+            <li><a href="/challenges">Challenges</a></li>
             {% if user.is_authentificated %}
                 <li><a href="/logout">Logout</a></li>
             {% else %}
-                <li><a href="/login">Login</a></li>
                 <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
             {% endif %}
+
             <li><a href="/contact">Contact</a></li>
-            <li><a href="/made_by">Credits</a></li>
         </ul>
 
         <div class="burger">
@@ -36,92 +37,89 @@
 <main>
     <section class="login-section">
         <div class="login-container">
-            <form id="edit-password-form" method="POST" class="login-content " style="height: 30rem">
-                <div class="login-heading">
-                    <h2>Change password</h2>
-                </div>
+
+            <form method="POST" class="login-content-bigger" enctype="multipart/form-data">
+                <header class="login-heading">
+                    <h2>Create Challenge</h2>
+                </header>
 
                 <div class="input-container">
                     <div class="input-wrapper">
-                        <label id="edit-password-email-label">Your Email</label>
-                        <input
-                                id="edit-password-email-input"
-                               class="input-field-normal"
-                               name="email-change-password"
+                        <label>Name of the project</label>
+                        <input class="input-field-normal"
+                               name="name-of-the-challenge"
                                type="text">
-                        <p id="edit-password-email-message"></p>
                     </div>
                 </div>
 
                 <div class="input-container">
                     <div class="input-wrapper">
-                        <label id="edit-password-new-password-label">New password</label>
-                        <input id="edit-password-new-password-input"
-                               class="input-field-normal"
-                               name="new-password-change-password"
-                               type="password">
-                        <p id="edit-password-new-password-message"></p>
+                        <label>Info about project</label>
+                        <textarea
+                                name="info-about-challenge">
+                        </textarea>
                     </div>
                 </div>
 
-                <div class="input-container">
-
-                    <div class="input-wrapper">
-                        <label id="edit-password-password-confirm-label">Confirm password</label>
-                        <input id="edit-password-password-confirm-input"
-                               class="input-field-normal"
-                               type="password"
-                               name="password-confirm-change-password">
-
-                        <p id="edit-password-password-confirm-message"></p>
-                    </div>
-
-                </div>
 
                 <div class="input-container">
-
                     <div class="input-wrapper">
-                        <label id="edit-password-friends-name-label">Your friends name</label>
-                        <input id="edit-password-friends-name-input"
-                               class="input-field-normal"
-                               name="friends-name-change-password"
+                        <label>Difficulty: </label>
+                        <input class="input-field-normal"
+                               name="difficulty-of-challenge"
                                type="text">
-                        <p id="edit-password-friends-name-message"></p>
                     </div>
-
                 </div>
 
                 <div class="input-container">
                     <div class="input-wrapper">
-                        <button>Confirm</button>
+                        <label>Github link: </label>
+                        <input class="input-field-normal"
+                               name="github-link-challenge"
+                               type="text">
+                    </div>
+                </div>
+
+
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <label> Select image : </label>
+                        <input type="file"
+                               class="input-field-normal"
+                               name="file">
+                    </div>
+                </div>
+
+
+
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <button type="submit">Create</button>
                     </div>
                 </div>
             </form>
         </div>
     </section>
+
+
+
 </main>
 
 <div class="background-images">
     <div class="square-1"></div>
     <div class="square-2"></div>
-    <div class="square-3-login"></div>
 </div>
-
-
-<script src="/static/js/navbar.js"></script>
-<script src="/static/js/main-script.js"></script>
 
 <footer>
     <div class="contact-us">
-
         <div class="contact-us-wrapper">
             <div class="contact-us__text">
                 <p>Contact Us</p>
             </div>
 
             <div class="contact-us__icons">
-                <a href="https://www.instagram.com/adamkurek_/"><img class="small-icon"
-                                                                     src="/static/img/images/instagram.png"></a>
+                <a href="https://www.instagram.com/adamkurek_/">
+                    <img class="small-icon" src="/static/img/images/instagram.png"></a>
                 <a href="https://twitter.com/AdamKurek19"><img class="small-icon" src="/static/img/images/twitter.png"></a>
                 <a href="https://sk.linkedin.com/in/adam-kurek-665b8522a?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.google.com%2F"><img
                         class="small-icon" src="/static/img/images/linked-in.png"></a>
@@ -130,11 +128,12 @@
     </div>
 
     <div class="copyright">
-        <p>Copyright &copy; 2022 </p>
+        <p>Copyright &copy; 2022</p>
     </div>
+
 </footer>
 
-
-{#<script src="/static/js/edit_pass.js"></script>#}
+<script src="/static/js/navbar.js"></script>
+<script src="/static/js/main-script.js"></script>
 </body>
 </html>

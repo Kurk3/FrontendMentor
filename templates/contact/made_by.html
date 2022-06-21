@@ -14,8 +14,12 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="/register">Register</a></li>
-            <li><a href="/login">Login</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="/logout">Logout</a></li>
+            {% else %}
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+            {% endif %}
             <li><a href="/contact">Contact</a></li>
         </ul>
 
@@ -31,7 +35,8 @@
         <div class="credits-wrapper">
             <div class="credits-row">
                 <div class="image-part">
-                    <a href="https://sk.linkedin.com/in/adam-kurek-665b8522a?trk=people-guest_people_search-card"><img src="/static/img/images/img_2.png" alt="Adam Kurek Frontend Developer"></a>
+                    <a href="https://sk.linkedin.com/in/adam-kurek-665b8522a?trk=people-guest_people_search-card"><img
+                            src="/static/img/images/img_2.png" alt="Adam Kurek Frontend Developer"></a>
                 </div>
 
                 <div class="text-part">
@@ -42,7 +47,8 @@
 
                         <p>
                             Hello my name is Adam and I am passionate about frontend development.
-                            I am a self-taught frontend developer with experience in working in photoshop and illustrator.
+                            I am a self-taught frontend developer with experience in working in photoshop and
+                            illustrator.
                             Technologies that I use are React.js and Flask.
                             Checkout my portfolio to see my projects that I've built :)
                         </p>
@@ -69,9 +75,11 @@
             </div>
 
             <div class="contact-us__icons">
-                <a href="https://www.instagram.com/adamkurek_/"><img class="small-icon" src="/static/img/images/instagram.png"></a>
+                <a href="https://www.instagram.com/adamkurek_/"><img class="small-icon"
+                                                                     src="/static/img/images/instagram.png"></a>
                 <a href="https://twitter.com/AdamKurek19"><img class="small-icon" src="/static/img/images/twitter.png"></a>
-                <a href="https://sk.linkedin.com/in/adam-kurek-665b8522a?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.google.com%2F"><img class="small-icon" src="/static/img/images/linked-in.png"></a>
+                <a href="https://sk.linkedin.com/in/adam-kurek-665b8522a?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.google.com%2F"><img
+                        class="small-icon" src="/static/img/images/linked-in.png"></a>
             </div>
         </div>
     </div>

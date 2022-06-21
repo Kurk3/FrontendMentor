@@ -22,9 +22,9 @@ const who_is_your_best_friend_input = document.getElementById('who-is-your-best-
 const who_is_your_best_friend_message = document.getElementById('who-is-your-best-friend-message');
 
 
-register_form.addEventListener('submit', (e) => {
-    let messages = [];
-    e.preventDefault();
+// register_form.addEventListener('submit', (e) => {
+    // let messages = [];
+    //  e.preventDefault();
 
 
     if (username_register_input.value === "") {
@@ -35,7 +35,7 @@ register_form.addEventListener('submit', (e) => {
         username_register_label.style.color = "red";
         username_register_message.innerHTML = "Enter your username.";
 
-        messages.push("Please enter your username");
+        // messages.push("Please enter your username");
 
         setTimeout(() => {
             username_register_message.innerHTML = null;
@@ -51,7 +51,7 @@ register_form.addEventListener('submit', (e) => {
         username_register_label.style.color = "red";
         username_register_message.innerHTML = "Username is too short.";
 
-        console.log(messages.push('Your name contain bad char'));
+        // console.log(messages.push('Your name contain bad char'));
 
         setTimeout(() => {
             username_register_message.innerHTML = null;
@@ -67,7 +67,7 @@ register_form.addEventListener('submit', (e) => {
         username_register_label.style.color = "red";
         username_register_message.innerHTML = "Username is too long.";
 
-        console.log(messages.push('Your name contain bad char'));
+        // console.log(messages.push('Your name contain bad char'));
 
         setTimeout(() => {
             reset_valid();
@@ -80,7 +80,7 @@ register_form.addEventListener('submit', (e) => {
         password_register_label.style.color = "red";
         password_register_message.innerHTML = "Enter your password.";
 
-        console.log(messages.push('Password is required'));
+        // console.log(messages.push('Password is required'));
 
         setTimeout(() => {
             // password_register_message.innerHTML = null;
@@ -98,7 +98,7 @@ register_form.addEventListener('submit', (e) => {
         password_register_label.style.color = "red";
         password_register_message.innerHTML = "Password must contain number.";
 
-        console.log(messages.push('Password must contain at least one number'));
+        // console.log(messages.push('Password must contain at least one number'));
 
         setTimeout(() => {
             // password_register_message.innerHTML = null;
@@ -115,7 +115,7 @@ register_form.addEventListener('submit', (e) => {
         password_register_label.style.color = "red";
         password_register_message.innerHTML = "Password is too short.";
 
-        console.log(messages.push('Password must be longer than 6 characters'));
+        // console.log(messages.push('Password must be longer than 6 characters'));
 
         setTimeout(() => {
             // password_register_message.innerHTML = null;
@@ -131,7 +131,7 @@ register_form.addEventListener('submit', (e) => {
         confirm_password_register_label.style.color = "red";
         confirm_password_register_message.innerHTML = "Confirm your password.";
 
-        console.log(messages.push('Confirm password is required'));
+        // console.log(messages.push('Confirm password is required'));
 
         setTimeout(() => {
             confirm_password_register_message.innerHTML = null;
@@ -148,7 +148,7 @@ register_form.addEventListener('submit', (e) => {
         confirm_password_register_message.innerHTML = "Passwords do not match.";
 
 
-        console.log(messages.push('Password does not match'));
+        // console.log(messages.push('Password does not match'));
 
         setTimeout(() => {
             reset_valid();
@@ -162,7 +162,7 @@ register_form.addEventListener('submit', (e) => {
         email_register_label.style.color = "red";
         email_register_message.innerHTML = "Enter your email.";
 
-        console.log(messages.push('Email cannot be empty.'));
+        // console.log(messages.push('Email cannot be empty.'));
 
         setTimeout(() => {
             reset_valid();
@@ -177,7 +177,7 @@ register_form.addEventListener('submit', (e) => {
         email_register_message.innerHTML = "Email must contain @";
 
 
-        console.log(messages.push('Email cant be empty'));
+        // console.log(messages.push('Email cant be empty'));
 
 
     } else if (email_register_input.value.indexOf(".") === -1) {
@@ -189,7 +189,7 @@ register_form.addEventListener('submit', (e) => {
         email_register_message.innerHTML = "Email must contain .";
 
 
-        console.log(messages.push('Email must contain .'));
+        // console.log(messages.push('Email must contain .'));
 
 
     } else if (who_is_your_best_friend_input.value === "") {
@@ -197,23 +197,20 @@ register_form.addEventListener('submit', (e) => {
         who_is_your_best_friend_input.style.border = "3px solid red";
         who_is_your_best_friend_label.style.color = "red";
 
-        console.log(messages.push('Please enter your best friend\'s name'));
-
+        // console.log(messages.push('Please enter your best friend\'s name'));
 
     } else {
-        console.log(messages.push('Registration successful'));
-        register_form.submit();
-        window.location.href = '/homepage_after';
-        //window.location.href = '/success';
+        console.log('registration success');
+        // window.location.href = '/homepage_after';
     }
 
-    if (messages.length > 0) {
-        e.preventDefault();
-        // errorElement.innerHTML = messages.join(', ');
-    } else {
+    // if (messages.length > 0) {
+    //     e.preventDefault();
+    //     // errorElement.innerHTML = messages.join(', ');
+    // } else {
+    //
+    // }
 
-    }
-});
 
 function valid_username() {
     username_register_message.style.color = "green";

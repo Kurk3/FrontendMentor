@@ -12,21 +12,6 @@
 </head>
 <body>
 
-<!--
-<article>
-<aside>
-<details>
-<figcaption>
-<figure>
-<footer>
-<header>
-<main>
-<mark>
-<nav>
-<section>
-<summary>
-<time>
--->
 <header>
     <nav>
 
@@ -38,9 +23,9 @@
             <li><a href="/forum">Forum</a></li>
             <li><a href="/challanges">Challenges</a></li>
             <li><a href="/solutions">Solutions</a></li>
-            <li><a href="/logout">Logout</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/made_by">Credits</a></li>
+            <li><a href="/logout">Logout</a></li>
         </ul>
 
         <div class="burger">
@@ -59,7 +44,7 @@
                 <header class="enter__section-text">
                     <h1>Improve your programming
                         skills by building <span>real life projects.</span></h1>
-                    <h1>Welcome <span class="text no-wavy">Adam!</span></h1>
+                    <h1>Welcome <span class="text no-wavy">{{ user.first_name }}</span></h1>
                 </header>
 
 

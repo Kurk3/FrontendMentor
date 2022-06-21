@@ -953,6 +953,7 @@ textarea:focus {
   padding-top: 0.5rem;
 }
 .forum-post__text p {
+  margin-top: 1.5rem;
   font-size: 1.3rem;
   color: #5b5b5b;
   text-align: justify;

@@ -12,21 +12,6 @@
 </head>
 <body>
 
-<!--
-<article>
-<aside>
-<details>
-<figcaption>
-<figure>
-<footer>
-<header>
-<main>
-<mark>
-<nav>
-<section>
-<summary>
-<time>
--->
 <header>
     <nav>
         <div class="logo">
@@ -34,8 +19,12 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="/register">Register</a></li>
+            {% if user.is_authentificated %}
+            <li><a href="/logout">Logout</a></li>
+            {% else %}
             <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+            {% endif %}
             <li><a href="/contact">Contact</a></li>
             <li><a href="/made_by">Credits</a></li>
         </ul>
@@ -56,7 +45,9 @@
                 <div class="enter__section-text">
                     <h1>Improve your programming
                         skills by building <span>real life projects.</span></h1>
-                    <a href="/register"><button >Sign Up</button></a>
+                    <a href="/register">
+                        <button>Sign Up</button>
+                    </a>
                 </div>
 
 
@@ -131,28 +122,30 @@
 <script src="/static/js/main-script.js"></script>
 
 
- <footer>
-        <div class="contact-us">
-            <div class="contact-us-wrapper">
-                <div class="contact-us__text">
-                    <p>Contact Us</p>
-                </div>
+<footer>
+    <div class="contact-us">
+        <div class="contact-us-wrapper">
+            <div class="contact-us__text">
+                <p>Contact Us</p>
+            </div>
 
-                <div class="contact-us__icons">
-                    <a href="https://www.instagram.com/adamkurek_/"><img class="small-icon" alt="Adam Kurek Instagram" src="/static/img/images/instagram.png"></a>
-                    <a href="https://twitter.com/AdamKurek19"><img alt="Adam Kurek twitter" class="small-icon" src="/static/img/images/twitter.png"></a>
-                    <a href="https://sk.linkedin.com/in/adam-kurek-665b8522a?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.google.com%2F">
-                        <img class="small-icon" alt="Adam Kurek LinkedIn"
-                             src="/static/img/images/linked-in.png">
-                    </a>
-                </div>
+            <div class="contact-us__icons">
+                <a href="https://www.instagram.com/adamkurek_/"><img class="small-icon" alt="Adam Kurek Instagram"
+                                                                     src="/static/img/images/instagram.png"></a>
+                <a href="https://twitter.com/AdamKurek19"><img alt="Adam Kurek twitter" class="small-icon"
+                                                               src="/static/img/images/twitter.png"></a>
+                <a href="https://sk.linkedin.com/in/adam-kurek-665b8522a?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.google.com%2F">
+                    <img class="small-icon" alt="Adam Kurek LinkedIn"
+                         src="/static/img/images/linked-in.png">
+                </a>
             </div>
         </div>
+    </div>
 
-        <div class="copyright">
-            <p>Copyright &copy; 2022</p>
-        </div>
-    </footer>
+    <div class="copyright">
+        <p>Copyright &copy; 2022</p>
+    </div>
+</footer>
 
 
 </body>

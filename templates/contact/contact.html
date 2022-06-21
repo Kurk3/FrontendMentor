@@ -15,8 +15,13 @@
 
         <ul class="nav-links">
             <li><a href="/forum">Forum</a></li>
-            <li><a href="/register">Register</a></li>
-            <li><a href="/login">Login</a></li>
+
+            {% if user.is_authenticated %}
+                <li><a href="/logout">Logout</a></li>
+            {% else %}
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            {% endif %}
             <li><a href="/made_by">Credits</a></li>
         </ul>
 
@@ -68,10 +73,12 @@
                 <p>Contact Us</p>
             </div>
 
-             <div class="contact-us__icons">
-                <a href="https://www.instagram.com/adamkurek_/"><img class="small-icon" src="/static/img/images/instagram.png"></a>
+            <div class="contact-us__icons">
+                <a href="https://www.instagram.com/adamkurek_/"><img class="small-icon"
+                                                                     src="/static/img/images/instagram.png"></a>
                 <a href="https://twitter.com/AdamKurek19"><img class="small-icon" src="/static/img/images/twitter.png"></a>
-                <a href="https://sk.linkedin.com/in/adam-kurek-665b8522a?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.google.com%2F"><img class="small-icon" src="/static/img/images/linked-in.png"></a>
+                <a href="https://sk.linkedin.com/in/adam-kurek-665b8522a?trk=people-guest_people_search-card&original_referer=https%3A%2F%2Fwww.google.com%2F"><img
+                        class="small-icon" src="/static/img/images/linked-in.png"></a>
             </div>
         </div>
     </div>

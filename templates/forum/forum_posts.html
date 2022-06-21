@@ -15,9 +15,10 @@
         </div>
         <ul class="nav-links">
             <li><a href="/challanges">Challenges</a></li>
-            <li><a href="/register">Register</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a href="/create-post">Create Post</a></li>
+            <li><a href="/logout">Logout</a></li>
             <li><a href="/contact">Contact</a></li>
+            <li><a href="/made_by">Credits</a></li>
         </ul>
         <div class="burger">
             <div class="line1"></div>
@@ -30,119 +31,80 @@
 
 <main>
     <section class="forum-post__section">
+
+
         <div class="forum-post__container">
             <header class="forum-post_main-heading">
                 <h1 class="text">Forum Posts</h1>
             </header>
-            <div class="forum-post-wrapper">
-                <div class="forum-post">
+            {% for post in posts %}
+                <div class="forum-post-wrapper">
+                    <div class="forum-post">
 
-                    <header class="forum-post__heading">
-                        <h1 class="wavy-text">Title of post</h1>
-                    </header>
+                        <header class="forum-post__heading">
+                            <h1 class="wavy-text">{{ post.question }}</h1>
+                        </header>
 
-                    <article class="forum-post__text">
-                        <p>olestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                            optiuit sunt excepturi expedita
-                            olestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                            optiuit sunt excepturi expe
-                            olestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                            optiuit sunt excepturi expe</p>
+                        <article class="forum-post__text">
+                            <p>{{ post.text }}</p>
+                        </article>
+                        <div class="forum-post__footer">
+                            <p class="name">{{ post.author }}</p>
+                            <a class="add-answer">Add answer</a>
+                            <a class="show-answer">Show answers</a>
+                            <p class="date">{{ post.date }}</p>
+                        </div>
+                    </div>
+
+
+                    <aside class="popup-window--add-answer">
+                        <div class="arrow-element-add-answer"></div>
+                        <form
+                                action="/create_comment/{{ post.id }}"
+                                method="POST"
+                                class="popup-window--show-answer-text">
+
+                            <h1 class="wavy-text">{{ post.question }}</h1>
+                            <p class="name">{{ user.firstName }}</p>
+
+
+                            <textarea
+                                    class="textarea-add-answer"
+                                    placeholder="Your solution"
+                                    name="comment-add-answer">
+                            </textarea>
+
+                            <button type="submit" class="add-answer-button">Add answer</button>
+
+                            <div class="popup-window--show-answer-footer">
+                                <a class="close-button-footer-add-answer">Close</a>
+                            </div>
+                        </form>
+                    </aside>
+
+
+                    <article class="popup-window--show-answer" id="comments-{{ post.id }}">
+
+                        <div class="arrow-element-show-answer"></div>
+                        <div class="popup-window--show-answer-text">
+
+                            <h1 class="wavy-text">Show answers </h1>
+                            {% for comment in post.comments %}
+                                <p class="name">{{ comment.author }}</p>
+                                <p>{{ comment.comment }}</p>
+                            {% endfor %}
+
+                            <div class="popup-window--show-answer-footer">
+                                <a class="close-button-footer-show-answer">Close</a>
+                            </div>
+
+                        </div>
+
                     </article>
-                    <div class="forum-post__footer">
-                        <p class="name">Adam Smith</p>
-                        <a class="add-answer">Add answer</a>
-                        <a class="show-answer">Show answers</a>
-                        <p class="date">9.05.2020</p>
-                    </div>
+
                 </div>
-
-
-                <aside class="popup-window--add-answer">
-                    <div class="arrow-element-add-answer"></div>
-                    <div class="popup-window--show-answer-text">
-                        <h1 class="wavy-text">the question name.</h1>
-                        <p class="name">Adam Smith</p>
-                        <textarea class="textarea-add-answer" placeholder="Your solution"></textarea>
-                        <button class="add-answer-button">Add answer</button>
-                        <div class="popup-window--show-answer-footer">
-                            <a class="close-button-footer-add-answer">Close</a>
-                        </div>
-                    </div>
-                </aside>
-                <article class="popup-window--show-answer">
-                    <div class="arrow-element-show-answer"></div>
-                    <div class="popup-window--show-answer-text">
-                        <h1 class="wavy-text">Show answers </h1>
-                        <p class="name">Adam Kurek</p>
-                        <p>(longer description) isquam eius sed odit fugiat iusto fuga praesentium optiuit sunt
-                            excepturi expe olestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                            numquam
-                            blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiu</p>
-                        <div class="popup-window--show-answer-footer">
-                            <a class="close-button-footer-show-answer">Close</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <div class="forum-post-wrapper">
-                <div class="forum-post">
-
-                    <div class="forum-post__heading">
-                        <h1 class="wavy-text">Title of post</h1>
-                    </div>
-
-                    <article class="forum-post__text">
-                        <p>
-                            olestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                            optiuit sunt excepturi expedita
-                            olestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                            optiuit sunt excepturi expe
-                            olestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                            optiuit sunt excepturi expe
-                        </p>
-                    </article>
-                    <div class="forum-post__footer">
-                        <p class="name">Adam Smith</p>
-                        <a class="add-answer">Add answer</a>
-                        <a class="show-answer">Show answers</a>
-                        <p class="date">9.05.2020</p>
-                    </div>
                 </div>
-                <aside class="popup-window--add-answer">
-                    <div class="arrow-element-add-answer"></div>
-                    <div class="popup-window--show-answer-text">
-                        <h1 class="wavy-text">the question name.</h1>
-                        <p class="name">Adam Smith</p>
-                        <textarea class="textarea-add-answer" placeholder="Your solution"></textarea>
-                        <button class="add-answer-button">Add answer</button>
-                        <div class="popup-window--show-answer-footer">
-                            <a class="close-button-footer-add-answer">Close</a>
-                        </div>
-                    </div>
-                </aside>
-                <article class="popup-window--show-answer">
-                    <div class="arrow-element-show-answer"></div>
-                    <div class="popup-window--show-answer-text">
-                        <h1 class="wavy-text">Show answers </h1>
-                        <p class="name">Adam Kurek</p>
-                        <p>(longer description) isquam eius sed odit fugiat iusto fuga praesentium optiuit sunt
-                            excepturi expe olestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                            numquam
-                            blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentiu</p>
-                        <div class="popup-window--show-answer-footer">
-                            <a class="close-button-footer-show-answer">Close</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
+            {% endfor %}
     </section>
 </main>
 
